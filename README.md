@@ -59,3 +59,68 @@ You must also download and extract:
 
 ```bash
 python DriverDrowsy.py
+
+
+## 🎯 Features
+
+- Real-time face and eye tracking
+- Eye Aspect Ratio (EAR) based detection
+- Audio alarm when drowsiness is detected
+- Simple and efficient logic for on-device computation
+
+---
+
+## 🛠️ Tech Stack
+
+- Python
+- OpenCV
+- mediapipe 
+- imutils
+- pygame
+
+---
+
+## 📁 Folder Structure
+
+DriverDrowsinessDetectionSystem/
+├── DriverDrowsy.py
+├── shape_predictor_68_face_landmarks.dat
+└── README.md
+
+yaml
+Copy
+Edit
+
+---
+
+## 🚀 How It Works
+
+1. Webcam captures live video.
+2. dlib detects facial landmarks.
+3. EAR (Eye Aspect Ratio) is calculated:
+   - If EAR < threshold (e.g., 0.25) for consecutive frames (e.g., 48 frames), it's considered drowsiness.
+4. Pygame triggers a buzzer sound to wake the driver.
+
+---
+
+## 🧠 Eye Aspect Ratio (EAR)
+
+EAR is calculated as:
+
+EAR = (||p2 - p6|| + ||p3 - p5||) / (2 * ||p1 - p4||)
+
+yaml
+Copy
+Edit
+
+Where `p1...p6` are specific eye landmarks. A lower EAR indicates closed eyes.
+
+---
+
+## 🔧 Installation
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/yourusername/DriverDrowsinessDetectionSystem.git
+cd DriverDrowsinessDetectionSystem
