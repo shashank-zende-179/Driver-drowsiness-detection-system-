@@ -57,11 +57,7 @@ You must also download and extract:
 3. Ensure your webcam is connected and accessible.
 4. Run the script using the command:
 
-```bash
-python DriverDrowsy.py
-
-
-## 🎯 Features
+### Features
 
 - Real-time face and eye tracking
 - Eye Aspect Ratio (EAR) based detection
